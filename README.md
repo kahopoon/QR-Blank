@@ -3,7 +3,7 @@
 No Ads, Clean, Simple open source QR Code URL scanner  
 Check URL by Google Safe Browsing before open.  
 
-![Alt text](readme-iamges/intro.gif?raw=true "intro gif")
+![Alt text](readme-images/intro.gif?raw=true "intro gif")
 
 ### Google Safe Browsing: On, Open Automatically: On
 URL open automatically if checking passed, prompt to ask if failed.
@@ -30,5 +30,5 @@ let googleAPIKey = "Your Google API key here"
 ```
 
 ## App Screen
-![Alt text](readme-iamges/screenA.jpeg?raw=true "screen A")
-![Alt text](readme-iamges/screenB.jpeg?raw=true "screen B")
+![Alt text](readme-images/screenA.jpeg?raw=true "screen A")
+![Alt text](readme-images/screenB.jpeg?raw=true "screen B")
