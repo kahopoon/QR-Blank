@@ -19,7 +19,7 @@ All scanned URL will prompt to ask but without url status.
 
 ## App store available
 If you don't want to make it complicated to clone this project, or you want to support this project / me,  
-you may download this app simply at app store https://itunes.apple.com/us/app/qr-blank/id1137064763?mt=8 ,  
+you may download this app simply at app store https://itunes.apple.com/app/id1137064763 ,  
 it will cost you less thank a buck. Thanks:)
 
 ## Edit to your Google API key
