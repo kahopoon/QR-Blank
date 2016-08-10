@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A254g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QR_Blank" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check URL by Google Safe Browsing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-Hi-ezq">
+                                <rect key="frame" x="12" y="514" width="234" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="cwy-3u-aYV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-Pa-crE">
+                                <rect key="frame" x="539" y="514" width="51" height="31"/>
+                                <color key="onTintColor" red="0.96470588239999999" green="0.78823529410000004" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="962-NP-tZa">
+                                <rect key="frame" x="539" y="557" width="51" height="31"/>
+                                <color key="onTintColor" red="0.96470588239999999" green="0.78823529410000004" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open passed URL Automatically" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcV-ha-llq">
+                                <rect key="frame" x="12" y="557" width="205" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="nXg-Ch-4fH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3d-LA-Jtb">
+                                <rect key="frame" x="90" y="180" width="420" height="120"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.78823529410000004" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="32"/>
+                                <state key="normal" title="Scan QR Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qrCodeScanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBE-PI-eXT"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-sq-R69">
+                                <rect key="frame" x="250" y="476" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Xzs-f2-eLL"/>
+                                    <constraint firstAttribute="height" constant="100" id="sfq-uh-bhd"/>
+                                </constraints>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="dimissScanAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9l-AJ-GuZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JmY-Hi-ezq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="0gX-Zg-GOt"/>
+                            <constraint firstItem="j3d-LA-Jtb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="9Iv-VR-xfp"/>
+                            <constraint firstItem="ITg-sq-R69" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ATV-CP-lyp"/>
+                            <constraint firstAttribute="trailing" secondItem="Muk-Pa-crE" secondAttribute="trailing" constant="12" id="KPw-Yi-4tK"/>
+                            <constraint firstItem="962-NP-tZa" firstAttribute="top" secondItem="Muk-Pa-crE" secondAttribute="bottom" constant="12" id="Qn1-E1-UTo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TcV-ha-llq" secondAttribute="bottom" constant="12" id="Rg2-SC-kw8"/>
+                            <constraint firstItem="j3d-LA-Jtb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xpr-w0-s3o"/>
+                            <constraint firstItem="TcV-ha-llq" firstAttribute="top" secondItem="JmY-Hi-ezq" secondAttribute="bottom" constant="12" id="Zas-gB-LFT"/>
+                            <constraint firstItem="j3d-LA-Jtb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="dMU-3v-tMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="962-NP-tZa" secondAttribute="trailing" constant="12" id="dSe-EJ-zl3"/>
+                            <constraint firstItem="j3d-LA-Jtb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="jhi-Gc-ll4"/>
+                            <constraint firstItem="TcV-ha-llq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="kI4-Ud-Xp5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ITg-sq-R69" secondAttribute="bottom" constant="24" id="nT0-GX-G9E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="962-NP-tZa" secondAttribute="bottom" constant="12" id="sp1-FK-G9F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="autoOpenURL" destination="962-NP-tZa" id="97V-6A-9Jf"/>
+                        <outlet property="closeButton" destination="ITg-sq-R69" id="7v7-Qr-ScJ"/>
+                        <outlet property="googleSafeBrowsing" destination="Muk-Pa-crE" id="V2O-HL-rz7"/>
+                        <outlet property="scanButton" destination="j3d-LA-Jtb" id="w7k-bI-UrT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="closeButton" width="95" height="95"/>
+    </resources>
+</document>
