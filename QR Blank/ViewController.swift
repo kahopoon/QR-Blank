@@ -17,7 +17,6 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBOutlet weak var scanButton, closeButton: UIButton!
     @IBOutlet weak var launchAtStart, googleSafeBrowsing, autoOpenURL: UISwitch!
 
-    let googleAPIKey = "AIzaSyDiizUkubGEdRZ2LCLPlmlwPJJhIbCe0_Q"
     var captureSession = AVCaptureSession()
     var previewLayer: AVCaptureVideoPreviewLayer!
     var initialLaunch:Bool = true
@@ -79,7 +78,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             if let metadataObject = metadataObjects.first {
                 hideFromCapture()
                 let readableObject = metadataObject as! AVMetadataMachineReadableCodeObject
-                if qrCodeFormatValid(readableObject.stringValue) {
+                if qrCodeContentIsURL(readableObject.stringValue) {
                     urlCheck(readableObject.stringValue)
                 } else {
                     nonURLAlert(readableObject.stringValue)
@@ -90,28 +89,19 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     func checkURLSafe(_ url:String, completion:@escaping (_ result: Bool) -> Void) {
         HUD.show(.labeledProgress(title: "Safety Check", subtitle: "Identifying..."))
-        let client = ["clientId":"qr-blank", "clientVersion":"1.0"]
-        let threatTypes = ["MALWARE", "SOCIAL_ENGINEERING", "UNWANTED_SOFTWARE", "THREAT_TYPE_UNSPECIFIED"]
-        let platformTypes = ["ANY_PLATFORM"]
-        let threatEntryTypes = ["URL"]
-        let threatEntries = [["url":"\(url)"]]
-        let threatInfo = ["threatTypes":threatTypes, "platformTypes":platformTypes, "threatEntryTypes":threatEntryTypes, "threatEntries":threatEntries] as [String : Any]
-        let paras:[String:AnyObject] = ["client":client as AnyObject, "threatInfo":threatInfo as AnyObject]
-        Alamofire.request("https://safebrowsing.googleapis.com/v4/threatMatches:find?key=\(googleAPIKey)", method: .post, parameters: paras, encoding: JSONEncoding.default).responseJSON { (response) in
-            self.internetDown = response.result.isFailure
-            if self.internetDown {
+        GoogleSafeBrowsingAPI.checkURLSafe(url) { (result) in
+            if result == nil {
                 HUD.hide()
                 completion(false)
             } else {
-                let result = JSON(response.result.value!).count == 0
-                HUD.flash(result ? .labeledSuccess(title: "Passed", subtitle: "The url look safe") : .labeledError(title: "Failed", subtitle: "The url look dangerous"), delay: 1.0, completion: { (true) in
-                    completion(result)
+                HUD.flash(result! ? .labeledSuccess(title: "Passed", subtitle: "The url look safe") : .labeledError(title: "Failed", subtitle: "The url look dangerous"), delay: 1.0, completion: { (true) in
+                    completion(result!)
                 })
             }
         }
     }
     
-    func qrCodeFormatValid(_ source:String) -> Bool {
+    func qrCodeContentIsURL(_ source:String) -> Bool {
         if let url = URL(string: source) {
             return UIApplication.shared.canOpenURL(url)
         }
