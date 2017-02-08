@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D12b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ScannedQR" representedClassName=".ScannedQR" syncable="YES">
+        <attribute name="contentString" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="createDate" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="isURL" attributeType="Boolean" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ScannedQR" positionX="-63" positionY="-18" width="128" height="90"/>
+    </elements>
+</model>

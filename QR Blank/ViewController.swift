@@ -84,8 +84,10 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 let readableObject = metadataObject as! AVMetadataMachineReadableCodeObject
                 if qrCodeContentIsURL(readableObject.stringValue) {
                     urlCheck(readableObject.stringValue)
+                    CoreData.saveScannedQR(isURL: true, content: readableObject.stringValue)
                 } else {
                     nonURLAlert(readableObject.stringValue)
+                    CoreData.saveScannedQR(isURL: false, content: readableObject.stringValue)
                 }
             }
         }
