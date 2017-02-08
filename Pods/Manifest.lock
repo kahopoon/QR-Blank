@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (3.4.1)
-  - PKHUD (3.2.1)
-  - SwiftyJSON (2.3.2)
+  - Alamofire (4.2.0)
+  - PKHUD (4.1.0)
+  - SwiftyJSON (3.1.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -9,10 +9,10 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  PKHUD: a0ecdee9f67d9b462c0c5e4ba38400292ea6ae6e
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
 PODFILE CHECKSUM: 243eb1f521ba4dc13241a979a8a5ef593d2f265a
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.1.1

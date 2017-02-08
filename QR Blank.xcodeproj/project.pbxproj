@@ -16,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A1B58D73011E74BBA85F3DC /* Pods-QR Blank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR Blank.release.xcconfig"; path = "Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank.release.xcconfig"; sourceTree = "<group>"; };
 		11E989181D2101D6006FA022 /* QR Blank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR Blank.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E9891B1D2101D6006FA022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E9891D1D2101D6006FA022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +23,9 @@
 		11E989221D2101D6006FA022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11E989251D2101D6006FA022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11E989271D2101D6006FA022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EA37F3D7B74B9C3A246127 /* Pods-QR Blank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR Blank.release.xcconfig"; path = "Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank.release.xcconfig"; sourceTree = "<group>"; };
 		6293D9E52457ADDFE587FF45 /* Pods_QR_Blank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QR_Blank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0FC10091327DDB27A785282 /* Pods-QR Blank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR Blank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank.debug.xcconfig"; sourceTree = "<group>"; };
+		63318B353C33D6E4A86108A8 /* Pods-QR Blank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR Blank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +45,8 @@
 			children = (
 				11E9891A1D2101D6006FA022 /* QR Blank */,
 				11E989191D2101D6006FA022 /* Products */,
-				14A2AD33434B588E370332C2 /* Pods */,
 				E0A88DC9D669E02D6E01A0B8 /* Frameworks */,
+				1AFEAE2DC1CC0E157081D748 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,11 +71,11 @@
 			path = "QR Blank";
 			sourceTree = "<group>";
 		};
-		14A2AD33434B588E370332C2 /* Pods */ = {
+		1AFEAE2DC1CC0E157081D748 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F0FC10091327DDB27A785282 /* Pods-QR Blank.debug.xcconfig */,
-				0A1B58D73011E74BBA85F3DC /* Pods-QR Blank.release.xcconfig */,
+				63318B353C33D6E4A86108A8 /* Pods-QR Blank.debug.xcconfig */,
+				35EA37F3D7B74B9C3A246127 /* Pods-QR Blank.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -95,12 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11E9892A1D2101D6006FA022 /* Build configuration list for PBXNativeTarget "QR Blank" */;
 			buildPhases = (
-				33A7DA59111E3BF2F0184ED6 /* 📦 Check Pods Manifest.lock */,
+				769F5F90DDF3BD1B5E3EE1B2 /* [CP] Check Pods Manifest.lock */,
 				11E989141D2101D6006FA022 /* Sources */,
 				11E989151D2101D6006FA022 /* Frameworks */,
 				11E989161D2101D6006FA022 /* Resources */,
-				52D4AA34709BEDBC371802DB /* 📦 Embed Pods Frameworks */,
-				092ED2A0745827B64F82EF02 /* 📦 Copy Pods Resources */,
+				8972BA536F38CFDC6C0A0174 /* [CP] Embed Pods Frameworks */,
+				EFB461E2F33066433EE14852 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +124,7 @@
 					11E989171D2101D6006FA022 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KX6H57GMQW;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -159,49 +160,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		092ED2A0745827B64F82EF02 /* 📦 Copy Pods Resources */ = {
+		769F5F90DDF3BD1B5E3EE1B2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		33A7DA59111E3BF2F0184ED6 /* 📦 Check Pods Manifest.lock */ = {
+		8972BA536F38CFDC6C0A0174 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		52D4AA34709BEDBC371802DB /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB461E2F33066433EE14852 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QR Blank/Pods-QR Blank-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -327,31 +328,37 @@
 		};
 		11E9892B1D2101D6006FA022 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0FC10091327DDB27A785282 /* Pods-QR Blank.debug.xcconfig */;
+			baseConfigurationReference = 63318B353C33D6E4A86108A8 /* Pods-QR Blank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "QR Blank/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.kahopoon.QR-Blank";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		11E9892C1D2101D6006FA022 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A1B58D73011E74BBA85F3DC /* Pods-QR Blank.release.xcconfig */;
+			baseConfigurationReference = 35EA37F3D7B74B9C3A246127 /* Pods-QR Blank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "QR Blank/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.kahopoon.QR-Blank";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
