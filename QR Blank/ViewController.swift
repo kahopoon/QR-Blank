@@ -19,9 +19,10 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     var captureSession = AVCaptureSession()
     var previewLayer: AVCaptureVideoPreviewLayer!
-    var initialLaunch:Bool = true
-    var requestForCapture:Bool = false
-    var internetDown:Bool = false
+    var initialLaunch:Bool      = true
+    var requestForCapture:Bool  = false
+    var internetDown:Bool       = false
+    var cameraNotAvailable:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,12 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         prepareCapture()
         
         if launchAtStart.isOn && initialLaunch {
-            showFromCapture()
-            initialLaunch = false
+            if showFromCapture() {initialLaunch = false}
         }
     }
 
     @IBAction func qrCodeScanAction(_ sender: AnyObject) {
-        showFromCapture()
+        let _ = showFromCapture()
     }
     
     @IBAction func dimissScanAction(_ sender: AnyObject) {
@@ -57,14 +57,18 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
             captureSession.startRunning()
         } catch {
+            cameraNotAvailable = true
         }
     }
     
-    func showFromCapture() {
-        requestForCapture = true
-        view.layer.addSublayer(previewLayer)
-        view.bringSubview(toFront: closeButton)
-        closeButton.isHidden = false
+    func showFromCapture() -> Bool {
+        if !cameraNotAvailable {
+            requestForCapture = true
+            view.layer.addSublayer(previewLayer)
+            view.bringSubview(toFront: closeButton)
+            closeButton.isHidden = false
+        }
+        return !cameraNotAvailable
     }
     
     func hideFromCapture() {
