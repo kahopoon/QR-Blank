@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 import PKHUD
 
-class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class MainVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var scanButton, closeButton: UIButton!
     @IBOutlet weak var launchAtStart, googleSafeBrowsing, autoOpenURL: UISwitch!
@@ -179,8 +179,9 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         autoOpenURL.isOn = switchOptions[2]
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func showHistoryButtonAction(_ sender: Any) {
+        let historyVC = storyboard?.instantiateViewController(withIdentifier: "ScannedHistoryVC")
+        present(historyVC!, animated: true, completion: nil)
     }
 
 }
